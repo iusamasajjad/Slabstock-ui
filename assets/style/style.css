@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+p{
+    margin: 0 !important;
+}
+
+/* common-classes */
+.blue-bg{
+    background-color: #09004b;
+}
+.blue-btn{
+    background-color: #1700c3;
+}
+.green-btn{
+    background-color: #00c307;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.datePicker:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.w-15{
+    width: 15% !important;
+}
+.color-white{
+    color: #fff;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.left-0{
+    left: 0;
+}
+.bg-white{
+    background-color: white !important;
+}
+.color-black{
+    color: #040b26;
+    font-size: 14px;
+}
+.font-normal{
+    font-size: 13px !important;
+}
+.bg-red{
+    background-color: #ed0b3f;
+}
+.color-blue{
+    color : #1700c3;
+}
+.color-red{
+    color: #eb0000;
+}
+.color-green{
+    color: #00c307;
+}
+.border-rgt{
+    border-right: 2px solid;
+    opacity: 0.2;
+}
+.border-l{
+    border-left: 1px solid;
+    right: 20px;
+    opacity: 0.2;
+    position: relative;
+}
+.border-r{
+    border-left: 1px solid;
+    left: 30px;
+    opacity: 0.2;
+    position: relative;
+}
+.border-width{
+    width: 35px;
+}
+.w-40{
+    width: 40%;
+}
+.w-35{
+    width: 35%;
+}
+.w-10{
+    width: 20%;
+}
+.w-16{
+    width: 16.5%;
+}
+
+/* navbar-styling */
+
+.side-nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 13%;
+}
+ul li a{
+    color: #fff;
+    font-weight: 300;
+}
+a:hover{
+    color: #fff !important;
+    opacity: 0.8;
+}
+
+.home a:hover{
+    color: #040b26 !important;
+    opacity: 0.7;
+    transition: 0.6s;
+    font-weight: bold;
+}
+/* ================== projectHeader ============== */
+.projectHeader{
+    height: 50px;
+    width: 100%;
+    border-bottom: solid 2px #b8b9c1;
+    background-color:#e5e6e9;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.projectData{
+    width: 100%;
+    background-color:  #fafafa;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.rectangle-blue{
+    width: 19px;
+  height: 19px;
+  margin: 0 10px 0 0;
+  padding: 4px 4px 4px;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+      
+}
+.datePicker{
+    z-index: 10;
+    width: 160px;
+    border-radius: 7px 7px 7px 7px;
+}
+.dropdown{
+    right: 8px;
+}
+.date{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 13px;
+    padding-left: 35px;
+    position: absolute;
+    inset: 0;
+    color: #fff;
+    width: 100%;
+}

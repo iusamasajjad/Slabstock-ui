@@ -1,0 +1,764 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+                                         <!-- date-picker -->
+                                         
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <title>Slabstack</title>
+</head>
+
+<body>
+    <div>
+
+        <!-- ==========================  side-nav ======================= -->
+        <div class="d-flex">
+            <div class="w-15 blue-bg height-100vh">
+                <div class="side-nav blue-bg">
+                    <div class="d-flex justify-content-center position-relative py-4">
+                        <nav class="">
+                            <div class="cursor-pointer">
+                                <img src="assets/images/Slabstack-logo.png">
+                            </div>
+                            <ul class="navbar-nav py-4 color-white">
+                                <li class="d-flex align-items-center">
+                                    <div class="pr-2"><img src="assets/images/dashboard.png"> </div>
+                                    <a class="nav-link" href="#">Dashboard</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="pr-2"><img src="assets/images/sales.png"> </div>
+                                    <a class="nav-link" href="#">Sales</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="position-absolute left-0">
+                                        <img height="30px" src="assets/images/rectangle.png">
+                                    </div>
+                                    <div class="pr-2"><img src="assets/images/qoutes.png"> </div>
+                                    <a class="nav-link" href="#">Quotes</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="pr-2"><img src="assets/images/transport.png"> </div>
+                                    <a class="nav-link" href="#">Transport</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="pr-2"><img src="assets/images/customers.png"> </div>
+                                    <a class="nav-link" href="customers.html">Customers</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- ======================= Header-section ======================= -->
+            <div class="w-100 mx-4">
+                <div class="d-flex justify-content-between py-4 text-align-center align-items-center">
+                    <div>
+                        <p class="color-black font-weight-light">We’re building modern, lean supply chain management
+                            software for concrete and aggregates producers</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center">
+                            <p class="color-black font-weight-light mr-2">Welcome Thomas</p>
+                            <P class="color-black font-weight-light mr-3">|</P>
+                            <p class="color-black font-weight-light mr-2 home"><a href="#" class="color-black nav-link">
+                                    Home</a></p>
+                            <div>
+                                <button type="button" class="btn bg-red color-white font-weight-normal">Sign
+                                    out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="color-blue font-normal font-weight-bold">Home > Quote</p>
+                </div>
+
+                <!-- ================== dropdown-section ================ -->
+
+                <div class="d-flex justify-content-between my-3">
+                    <div class="dropdown">
+                        <button type="button"
+                            class="btn outline-none color-black bg-white border border-dark dropdown-toggle"
+                            data-toggle="dropdown">
+                            All Projects
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="dropdown">
+                            <button type="button"
+                                class="btn mr-2 color-white font-normal blue-btn border border-dark d-flex align-items-center dropdown-toggle"
+                                data-toggle="dropdown">
+                                <div class="pr-1">
+                                    <img width="20px" src="assets/images/question.png">
+                                </div>
+                                
+                                10 Entries per page
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                            </div>
+                        </div>
+                        <div class="datePicker  px-2 d-flex align-items-center green-btn position-relative">
+                            <img class="px-1" width="28px" src="assets/images/question.png">                               
+                                <div><input class="cursor-pointer green-btn date" type="text" name="daterange" value="01-30 - 02-10"></div>
+                                <img class="position-absolute dropdown" width="10px" src="assets/images/dropDown.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- =================== project-table ====================== -->
+                <div class="projectHeader">
+                    <div class="d-flex mx-2 w-100">
+                        <div class=" d-flex w-40">
+                            <div>
+                                <p class="font-weight-bold font-normal border-width">Sr. #</p>
+                            </div>
+                            <div class="border-rgt"></div>
+                            <div>
+                                <p class="font-normal font-weight-ligh ml-3">Project / Product Name</p>
+                            </div>
+                        </div>
+                        <div class="d-flex text-align-start w-100">
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">Product Type</p>
+                            </div>
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">transport Cost</p>
+                            </div>
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">Escalators Cost</p>
+                            </div>
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">Quote</p>
+                            </div>
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">Status</p>
+                            </div>
+                            <div class="w-10">
+                                <p class="font-normal font-weight-ligh">Action</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============== project Data ================= -->
+                <div class="projectData py-3">
+
+                    <!-- ========================== Awating-status-data ============================= -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">01</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Alison Parker Flat construction
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,400</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$2,190</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">Awaiting</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon material-edit"
+                                                    d="M4.5 13.2v2.3h2.291l6.758-6.758-2.291-2.295zm10.821-6.234a.609.609 0 0 0 0-.862l-1.43-1.43a.608.608 0 0 0-.862 0l-1.117 1.119L14.2 8.085z"
+                                                    transform="translate(-4.5 -4.496)" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.001" height="11"
+                                                viewBox="0 0 11.001 11">
+                                                <path data-name="Icon ionic-ios-send"
+                                                    d="M15.157 4.527 4.639 9.112a.241.241 0 0 0 .009.438l2.845 1.607a.459.459 0 0 0 .524-.052l5.61-4.836c.037-.032.126-.092.16-.057s-.02.123-.052.16l-4.853 5.467a.457.457 0 0 0-.046.547l1.864 2.983a.242.242 0 0 0 .436-.006l4.345-10.518a.241.241 0 0 0-.324-.318z"
+                                                    transform="translate(-4.503 -4.503)" style="fill:#00c307" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon open-data-transfer-download"
+                                                    d="M4.125 0v4.125h-2.75L5.5 8.25l4.125-4.125h-2.75V0zM0 9.625V11h11V9.625z"
+                                                    style="fill:#ffd541" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====================== Accepted-status-data ========================== -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">02</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Tom & Alicia Office
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,200</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-green">Accepted</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-green">Done</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/tick.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====================== Canceled-status-data ========================== -->
+
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">03</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Robertson & co.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">Custom Mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">Canceled</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-red">Declined</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/cancel.png">
+                                    </div>
+                                    <div class="d-flex align-items-center ml-2"><img src="assets/images/telephone.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ====================== Accepted-status-data ========================== -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">04</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Robin Cooper Pvt Ltd.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,200</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-green">Accepted</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-green">Done</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/tick.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========================== Awating-status-data ============================= -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">05</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Abdul Hadi Pharmaceuticals Pvt
+                                        Ltd.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,400</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$2,190</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">Awaiting</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon material-edit"
+                                                    d="M4.5 13.2v2.3h2.291l6.758-6.758-2.291-2.295zm10.821-6.234a.609.609 0 0 0 0-.862l-1.43-1.43a.608.608 0 0 0-.862 0l-1.117 1.119L14.2 8.085z"
+                                                    transform="translate(-4.5 -4.496)" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.001" height="11"
+                                                viewBox="0 0 11.001 11">
+                                                <path data-name="Icon ionic-ios-send"
+                                                    d="M15.157 4.527 4.639 9.112a.241.241 0 0 0 .009.438l2.845 1.607a.459.459 0 0 0 .524-.052l5.61-4.836c.037-.032.126-.092.16-.057s-.02.123-.052.16l-4.853 5.467a.457.457 0 0 0-.046.547l1.864 2.983a.242.242 0 0 0 .436-.006l4.345-10.518a.241.241 0 0 0-.324-.318z"
+                                                    transform="translate(-4.503 -4.503)" style="fill:#00c307" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon open-data-transfer-download"
+                                                    d="M4.125 0v4.125h-2.75L5.5 8.25l4.125-4.125h-2.75V0zM0 9.625V11h11V9.625z"
+                                                    style="fill:#ffd541" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========================== Awating-status-data ============================= -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">06</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Times News & Magazine
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,400</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$2,190</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">Awaiting</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon material-edit"
+                                                    d="M4.5 13.2v2.3h2.291l6.758-6.758-2.291-2.295zm10.821-6.234a.609.609 0 0 0 0-.862l-1.43-1.43a.608.608 0 0 0-.862 0l-1.117 1.119L14.2 8.085z"
+                                                    transform="translate(-4.5 -4.496)" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.001" height="11"
+                                                viewBox="0 0 11.001 11">
+                                                <path data-name="Icon ionic-ios-send"
+                                                    d="M15.157 4.527 4.639 9.112a.241.241 0 0 0 .009.438l2.845 1.607a.459.459 0 0 0 .524-.052l5.61-4.836c.037-.032.126-.092.16-.057s-.02.123-.052.16l-4.853 5.467a.457.457 0 0 0-.046.547l1.864 2.983a.242.242 0 0 0 .436-.006l4.345-10.518a.241.241 0 0 0-.324-.318z"
+                                                    transform="translate(-4.503 -4.503)" style="fill:#00c307" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon open-data-transfer-download"
+                                                    d="M4.125 0v4.125h-2.75L5.5 8.25l4.125-4.125h-2.75V0zM0 9.625V11h11V9.625z"
+                                                    style="fill:#ffd541" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ====================== Accepted-status-data ========================== -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">07</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Science Corp. Ltd.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,200</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-green">Accepted</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-green">Done</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/tick.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========================== Awating-status-data ============================= -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">08</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Alison Parker Flat construction
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,400</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$2,190</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">Awaiting</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon material-edit"
+                                                    d="M4.5 13.2v2.3h2.291l6.758-6.758-2.291-2.295zm10.821-6.234a.609.609 0 0 0 0-.862l-1.43-1.43a.608.608 0 0 0-.862 0l-1.117 1.119L14.2 8.085z"
+                                                    transform="translate(-4.5 -4.496)" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.001" height="11"
+                                                viewBox="0 0 11.001 11">
+                                                <path data-name="Icon ionic-ios-send"
+                                                    d="M15.157 4.527 4.639 9.112a.241.241 0 0 0 .009.438l2.845 1.607a.459.459 0 0 0 .524-.052l5.61-4.836c.037-.032.126-.092.16-.057s-.02.123-.052.16l-4.853 5.467a.457.457 0 0 0-.046.547l1.864 2.983a.242.242 0 0 0 .436-.006l4.345-10.518a.241.241 0 0 0-.324-.318z"
+                                                    transform="translate(-4.503 -4.503)" style="fill:#00c307" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rectangle-blue">
+                                        <div class="color-blue">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                                                viewBox="0 0 11 11">
+                                                <path data-name="Icon open-data-transfer-download"
+                                                    d="M4.125 0v4.125h-2.75L5.5 8.25l4.125-4.125h-2.75V0zM0 9.625V11h11V9.625z"
+                                                    style="fill:#ffd541" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ====================== Accepted-status-data ========================== -->
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">09</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Tom & Alicia Office
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">house mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,200</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$1,800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-green">Accepted</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-green">Done</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/tick.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ====================== Canceled-status-data ========================== -->
+
+                    <div class="d-flex">
+                        <div class="d-flex mx-2 w-100">
+                            <div class=" d-flex w-40">
+                                <div>
+                                    <p class="py-2 font-weight-bold font-normal border-width">10</p>
+                                </div>
+                                <div class="border-rgt"></div>
+                                <div>
+                                    <p class="font-normal py-2 font-weight-ligh ml-3">Robertson & co.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-align-center w-100">
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2">Custom Mix</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">None</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-blue">$800</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10">
+                                    <p class="font-normal font-weight-ligh py-2 color-red">Canceled</p>
+                                </div>
+                                <div class="border-l"></div>
+                                <div class="w-10 py-2 d-flex">
+                                    <P class="font-normal font-weight-ligh color-red">Declined</P>
+                                    <div class="d-flex align-items-center ml-1"><img src="assets/images/cancel.png">
+                                    </div>
+                                    <div class="d-flex align-items-center ml-2"><img src="assets/images/telephone.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================== Request-section ====================== -->
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex my-5">
+                        <div class="mx-2">
+                            <button type="button"
+                                class="btn bg-white color-black border border-dark font-weight-bold">Newly
+                                Arrived</button>
+                        </div>
+                        <div>
+                            <button type="button"
+                                class="btn bg-white color-black border border-dark font-weight-bold">Pending
+                                Requests</button>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <p class="font-weight-bold color-blue">1</p>
+                            <p class="ml-1 font-weight-bold">2</p>
+                            <p class="ml-1 font-weight-bold">3</p>
+                            <p class="ml-1 font-weight-bold">4</p>
+                            <p class="ml-1 font-weight-bold">5</p>
+                        </div>
+                        <div class="ml-1">
+                            <button type="button"
+                                class="btn bg-white color-black border border-dark font-weight-bold">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ================== print-button ==================== -->
+
+                <div class="py-3">
+                    <button type="button"
+                        class="btn d-flex align-items-center text-align-center blue-btn color-white border border-dark font-weight-normal">
+                        <div class="pr-1">
+                            <img width="20px" src="assets/images/question.png">
+                        </div>Print
+                        Docs
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('input[name="daterange"]').daterangepicker({
+                    timePicker: true,
+                    timePickerIncrement: 30,
+                    locale: {
+                        format: 'MMMM DD'
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>
